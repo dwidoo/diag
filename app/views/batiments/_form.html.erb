@@ -1,0 +1,19 @@
+<%= simple_form_for :batiment, url: batiments_path, html: { class: 'form-horizontal' } do |f|  %>
+	 <% if @batiment.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@batiment.errors.count, "erreur") %> empêchent
+      ce batiment d'être enregistré:</h2>
+    <ul>
+    <% @batiment.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <%= f.input :adresse %>
+  <%= f.input :designation %>
+  <%= f.input :code_postal %>
+  <%= f.input :commune %>
+  <%= f.button :submit, :class => 'btn btn-info' %>
+<% end %>

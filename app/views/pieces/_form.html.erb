@@ -1,0 +1,17 @@
+<%= simple_form_for @batiment.piece , url: pieces_path, html: { class: 'form-horizontal' } do |f|  %>
+	 <% if @piece.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@piece.errors.count, "erreur") %> empêchent
+      cette piece d'être enregistrée:</h2>
+    <ul>
+    <% @piece.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <%= f.input :nom %>
+  <%= f.input :numero %>
+  <%= f.button :submit, :class => 'btn btn-info' %>
+<% end %>

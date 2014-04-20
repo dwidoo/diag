@@ -1,0 +1,30 @@
+<% if !flash[:notice].blank? %>
+  <div class="bg-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<%= link_to "Nouveau bâtiment",new_batiment_path %>
+
+<h1>Liste des batiments</h1>
+ 
+<table class="table table-striped">
+  <tr>
+    <th>Adresse</th>
+    <th>Désignation</th>
+    <th>CP</th>
+    <th>Commune</th>
+  </tr>
+ 
+  <% @batiments.each do |batiment| %>
+    <tr>
+      <td><%= batiment.adresse %></td>
+      <td><%= batiment.designation %></td>
+      <td><%= batiment.code_postal %></td>
+      <td><%= batiment.commune %></td>
+      <td><%= link_to "Voir", batiment %> </td>
+      <td><%= link_to "Modifier", edit_batiment_path(batiment) %> </td>
+      <td><%= link_to "Supprimer", batiment_path(batiment), method: :delete, data: { confirm: "Êtes-vous sûr?"} %></td>
+    </tr>
+  <% end %>
+</table>
