@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  numero: 1
+  batiment_id: 
+
+two:
+  nom: MyString
+  numero: 1
+  batiment_id: 

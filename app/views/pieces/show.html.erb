@@ -1,0 +1,11 @@
+<h1>Pièce</h1>
+<p>
+  <strong>Batiment:</strong>
+  <%= @batiment.adresse %>
+</p>
+<p>
+  <strong>Pièce:</strong>
+  <%= @piece.nom %>
+</p>
+<%= link_to 'Modifier', edit_batiment_piece_path(@batiment,@piece) %>
+<%= link_to 'Retour', batiment_path(@batiment) %>

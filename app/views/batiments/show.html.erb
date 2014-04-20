@@ -15,9 +15,30 @@
   <strong>Commune:</strong>
   <%= @batiment.commune %>
 </p>
-<h2>Pieces</h2>
+<h2>Pièces</h2>
+
+<table class="table table-striped">
+ 	<tr>
+   	<th>Pièce</th>
+  </tr>
+
+  <% @batiment.pieces.each do |piece| %>
+		<tr>
+		  <td> <%= piece.nom %> <%= piece.numero %> </td>
+		  <td><%= link_to 'Voir', [@batiment, piece] %> </td> 
+     <%# <td><%= link_to 'Modifier', edit_batiment_piece_path(@batiment.id, piece.id) %> <%#</td>%>
+    </tr>
+  <% end %>
+</table>	
 
 
+
+<h2>Ajouter une Pièce</h2>
+<%= simple_form_for [@batiment,@piece] do |f|  %>
+	 	<%= f.input :nom, collection: f.object.assignable_noms, :label => 'Type de Pièce' %>
+  	<%= f.input :numero, label: 'Numéro (si plusieurs)' %>
+  	<%= f.button :submit, :class => 'btn btn-info', label: 'Créer la pièce' %>
+<% end %>
 
 <%= link_to "Retour",batiments_path %>
 <%= link_to "Modifier", edit_batiment_path(@batiment) %>
