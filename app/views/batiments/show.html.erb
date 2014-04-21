@@ -25,8 +25,9 @@
   <% @batiment.pieces.each do |piece| %>
 		<tr>
 		  <td> <%= piece.nom %> <%= piece.numero %> </td>
-		  <td><%= link_to 'Voir', [@batiment, piece] %> </td> 
-     <%# <td><%= link_to 'Modifier', edit_batiment_piece_path(@batiment.id, piece.id) %> <%#</td>%>
+		  <td><%= link_to 'Voir', url_for([@batiment,piece]) %> </td> 
+      <td><%= link_to 'Voir 2', url_for(piece) %> </td> 
+      
     </tr>
   <% end %>
 </table>	
@@ -34,11 +35,7 @@
 
 
 <h2>Ajouter une Pièce</h2>
-<%= simple_form_for [@batiment,@piece] do |f|  %>
-	 	<%= f.input :nom, collection: f.object.assignable_noms, :label => 'Type de Pièce' %>
-  	<%= f.input :numero, label: 'Numéro (si plusieurs)' %>
-  	<%= f.button :submit, :class => 'btn btn-info', label: 'Créer la pièce' %>
-<% end %>
+<%= render 'pieces/form' %>
 
 <%= link_to "Retour",batiments_path %>
 <%= link_to "Modifier", edit_batiment_path(@batiment) %>

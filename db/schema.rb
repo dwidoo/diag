@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420162855) do
+ActiveRecord::Schema.define(version: 20140420214222) do
 
   create_table "batiments", force: true do |t|
     t.string   "adresse"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20140420162855) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "elements", force: true do |t|
+    t.string   "nom"
+    t.integer  "piece_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "elements", ["piece_id"], name: "index_elements_on_piece_id"
 
   create_table "pieces", force: true do |t|
     t.string   "nom"

@@ -1,5 +1,5 @@
 class PiecesController < ApplicationController
-	before_filter :load_batiment
+	after_filter :load_batiment
 
 	def index
 		@pieces = @batiment.pieces.all
@@ -21,15 +21,16 @@ class PiecesController < ApplicationController
 	end
 
 	def show
-		@piece = @batiment.pieces.find(params[:id])
+		@piece = Piece.find(params[:id])
+		@batiment = @piece.batiment
 	end
 
 	def edit
-		@piece = @batiment.pieces.find(params[:id])
+		@piece = Piece.find(params[:id])
 	end
 
 	def update
-		@piece = @batiment.pieces.find(params[:id])
+		@piece = Piece.find(params[:id])
 		if @piece.update_attributes(piece_params)
 			flash[:notice] = "Pièce modifiée!"
 		end
@@ -37,19 +38,19 @@ class PiecesController < ApplicationController
 	end
 
 	def delete
-		@piece = @batiment.pieces.find(params[:id])
+		@piece = Piece.find(params[:id])
 	end
 
 	def destroy
-		piece = @batiment.pieces.find(params[:id]).destroy
+		piece = Piece.find(params[:id]).destroy
 		flash[:notice] = "Pièce supprimée!"
 		redirect_to batiment_pieces_path(@batiment)
 	end
 
 	private
-	#pour charger le bâtiment parent avant chaque méthode
+	#pour charger le bâtiment parent après chaque méthode
 	def load_batiment
-		@batiment = Batiment.find(params[:batiment_id])
+		@batiment = @piece.batiment
 	end
 	#pour create - sécurité
 	def piece_params
