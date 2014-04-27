@@ -25,9 +25,7 @@
   <% @batiment.pieces.each do |piece| %>
 		<tr>
 		  <td> <%= piece.nom %> <%= piece.numero %> </td>
-		  <td><%= link_to 'Voir', url_for([@batiment,piece]) %> </td> 
-      <td><%= link_to 'Voir 2', url_for(piece) %> </td> 
-      
+		  <td><%= link_to 'Voir', piece %> </td>      
     </tr>
   <% end %>
 </table>	

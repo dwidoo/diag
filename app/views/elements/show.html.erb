@@ -1,2 +1,4 @@
-<h1>Element#show</h1>
-<p>Find me in app/views/element/show.html.erb</p>
+<h1>Element: <%= @element.nom %> de la pièce <%= @element.piece.nom %> (<%= @element.piece.batiment.adresse %>)</h1>
+
+<%= link_to 'Modifier', edit_element_path %>
+<p><%= link_to 'Retour', @element.piece %></p>

@@ -5,6 +5,7 @@ one:
   designation: MyString
   code_postal: MyString
   commune: MyString
+  id: 1
 
 two:
   adresse: MyString

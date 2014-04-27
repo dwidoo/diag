@@ -2,7 +2,8 @@
 
 one:
   nom: MyString
-  piece_id: 
+  piece_id: 1 
+  id: 1
 
 two:
   nom: MyString

@@ -1,0 +1,4 @@
+<%= simple_form_for [@piece,@element] do |f|  %>
+    <%= f.input :nom, collection: f.object.assignable_noms %>
+    <%= f.button :submit, :class => 'btn btn-info', label: 'Créer l élément' %>
+<% end %>

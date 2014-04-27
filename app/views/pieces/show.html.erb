@@ -1,14 +1,23 @@
-<h1>Pièce</h1>
-<p>
-  <strong>Batiment:</strong>
-  <%= @batiment.adresse %>
-</p>
-<p>
-  <strong>Pièce:</strong>
-  <%= @piece.nom %>
-</p>
-<%= link_to 'Modifier', edit_batiment_piece_path(@batiment,@piece) %>
 
-<%= link_to 'Ajouter un élément', new_element_path %>
 
-<%= link_to 'Retour', batiment_path(@batiment) %>
+
+<h1>Eléments de la pièce <%= @piece.nom %> (<%= @batiment.adresse %>) </h1>
+
+<table class="table table-striped">
+ 	<tr>
+   	<th>Elément</th>
+  </tr>
+
+  <% @piece.elements.each do |element| %>
+		<tr>
+		  <td> <%= element.nom %> </td>
+		  <td><%= link_to 'Voir', element %> </td>       
+    </tr>
+  <% end %>
+</table>	
+
+<p><%= link_to 'Renommer la Pièce', edit_batiment_piece_path(@batiment,@piece) %></p>
+<p><%= link_to 'Ajouter un élément', new_piece_element_path(@piece) %>
+</p>
+
+<p><%= link_to 'Retour', batiment_path(@batiment) %></p>

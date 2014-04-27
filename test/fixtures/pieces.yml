@@ -3,7 +3,8 @@
 one:
   nom: MyString
   numero: 1
-  batiment_id: 
+  batiment_id: 1
+  id: 1
 
 two:
   nom: MyString

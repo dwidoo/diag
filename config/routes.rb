@@ -1,13 +1,6 @@
 Diag::Application.routes.draw do
-  #get "element/index"
-  #get "element/new"
-  #get "element/create"
-  #get "element/show"
-  #get "element/edit"
-  #get "element/update"
-  #get "element/delete"
-  #get "element/destroy"
-  #get "welcome/index"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -26,11 +19,10 @@ Diag::Application.routes.draw do
     resources :pieces
   end
   
-  resources :pieces do
+  resources :pieces, shallow: true do
       resources :elements
   end
 
-  resources :elements
   
   # Example resource route with options:
   #   resources :products do
