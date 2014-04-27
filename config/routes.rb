@@ -1,6 +1,10 @@
 Diag::Application.routes.draw do
 
 
+  resources :missions
+
+  resources :diagnostiqueurs
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

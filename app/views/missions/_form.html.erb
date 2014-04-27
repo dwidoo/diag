@@ -1,0 +1,19 @@
+<%= simple_form_for(@mission) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :num_dossier %>
+    <%= f.input :date_reperage %>
+    <%= f.input :heure_reperage %>
+    <%= f.input :duree_reperage %>
+    <%= f.input :top_amiante %>
+    <%= f.input :perimetre_reperage %>
+    <%= f.input :dateheure_visite %>
+    <%= f.input :deadline_rapport %>
+    <%= f.input :date_emission_rapport %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom: MyString
+  prenom: MyString
+  raison_sociale: MyString
+  num_certif: MyString
+  validite_certif: 2014-04-27
+  obtention_certif: 2014-04-27
+  adresse: MyString
+  code_postal: MyString
+  tel: MyString
+  email: MyString
+  num_tva: MyString
+  siret: MyString
+  nom_assureur: MyString
+  coordonnees_assureur: MyText
+  num_assurance: MyString
+  validite_assurance: 2014-04-27
+
+two:
+  nom: MyString
+  prenom: MyString
+  raison_sociale: MyString
+  num_certif: MyString
+  validite_certif: 2014-04-27
+  obtention_certif: 2014-04-27
+  adresse: MyString
+  code_postal: MyString
+  tel: MyString
+  email: MyString
+  num_tva: MyString
+  siret: MyString
+  nom_assureur: MyString
+  coordonnees_assureur: MyText
+  num_assurance: MyString
+  validite_assurance: 2014-04-27

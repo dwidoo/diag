@@ -1,0 +1,43 @@
+<h1>Listing missions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num dossier</th>
+      <th>Date reperage</th>
+      <th>Heure reperage</th>
+      <th>Duree reperage</th>
+      <th>Top amiante</th>
+      <th>Perimetre reperage</th>
+      <th>Dateheure visite</th>
+      <th>Deadline rapport</th>
+      <th>Date emission rapport</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @missions.each do |mission| %>
+      <tr>
+        <td><%= mission.num_dossier %></td>
+        <td><%= mission.date_reperage %></td>
+        <td><%= mission.heure_reperage %></td>
+        <td><%= mission.duree_reperage %></td>
+        <td><%= mission.top_amiante %></td>
+        <td><%= mission.perimetre_reperage %></td>
+        <td><%= mission.dateheure_visite %></td>
+        <td><%= mission.deadline_rapport %></td>
+        <td><%= mission.date_emission_rapport %></td>
+        <td><%= link_to 'Show', mission %></td>
+        <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
+        <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mission', new_mission_path %>

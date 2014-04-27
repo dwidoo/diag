@@ -1,0 +1,26 @@
+<%= simple_form_for(@diagnostiqueur) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :nom %>
+    <%= f.input :prenom %>
+    <%= f.input :raison_sociale %>
+    <%= f.input :num_certif %>
+    <%= f.input :validite_certif %>
+    <%= f.input :obtention_certif %>
+    <%= f.input :adresse %>
+    <%= f.input :code_postal %>
+    <%= f.input :tel %>
+    <%= f.input :email %>
+    <%= f.input :num_tva %>
+    <%= f.input :siret %>
+    <%= f.input :nom_assureur %>
+    <%= f.input :coordonnees_assureur %>
+    <%= f.input :num_assurance %>
+    <%= f.input :validite_assurance %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

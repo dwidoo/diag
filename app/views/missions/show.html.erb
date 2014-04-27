@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num dossier:</strong>
+  <%= @mission.num_dossier %>
+</p>
+
+<p>
+  <strong>Date reperage:</strong>
+  <%= @mission.date_reperage %>
+</p>
+
+<p>
+  <strong>Heure reperage:</strong>
+  <%= @mission.heure_reperage %>
+</p>
+
+<p>
+  <strong>Duree reperage:</strong>
+  <%= @mission.duree_reperage %>
+</p>
+
+<p>
+  <strong>Top amiante:</strong>
+  <%= @mission.top_amiante %>
+</p>
+
+<p>
+  <strong>Perimetre reperage:</strong>
+  <%= @mission.perimetre_reperage %>
+</p>
+
+<p>
+  <strong>Dateheure visite:</strong>
+  <%= @mission.dateheure_visite %>
+</p>
+
+<p>
+  <strong>Deadline rapport:</strong>
+  <%= @mission.deadline_rapport %>
+</p>
+
+<p>
+  <strong>Date emission rapport:</strong>
+  <%= @mission.date_emission_rapport %>
+</p>
+
+<%= link_to 'Edit', edit_mission_path(@mission) %> |
+<%= link_to 'Back', missions_path %>

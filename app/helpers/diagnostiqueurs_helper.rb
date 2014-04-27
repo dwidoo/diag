@@ -1,0 +1,2 @@
+module DiagnostiqueursHelper
+end

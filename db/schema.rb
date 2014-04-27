@@ -11,13 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420214222) do
+ActiveRecord::Schema.define(version: 20140427145611) do
 
   create_table "batiments", force: true do |t|
     t.string   "adresse"
     t.string   "designation"
     t.string   "code_postal"
     t.string   "commune"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "diagnostiqueurs", force: true do |t|
+    t.string   "nom"
+    t.string   "prenom"
+    t.string   "raison_sociale"
+    t.string   "num_certif"
+    t.date     "validite_certif"
+    t.date     "obtention_certif"
+    t.string   "adresse"
+    t.string   "code_postal"
+    t.string   "tel"
+    t.string   "email"
+    t.string   "num_tva"
+    t.string   "siret"
+    t.string   "nom_assureur"
+    t.text     "coordonnees_assureur"
+    t.string   "num_assurance"
+    t.date     "validite_assurance"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,6 +51,20 @@ ActiveRecord::Schema.define(version: 20140420214222) do
   end
 
   add_index "elements", ["piece_id"], name: "index_elements_on_piece_id"
+
+  create_table "missions", force: true do |t|
+    t.integer  "num_dossier"
+    t.date     "date_reperage"
+    t.time     "heure_reperage"
+    t.time     "duree_reperage"
+    t.boolean  "top_amiante"
+    t.text     "perimetre_reperage"
+    t.datetime "dateheure_visite"
+    t.date     "deadline_rapport"
+    t.date     "date_emission_rapport"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pieces", force: true do |t|
     t.string   "nom"
