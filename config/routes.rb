@@ -1,10 +1,5 @@
 Diag::Application.routes.draw do
 
-
-  resources :missions
-
-  resources :diagnostiqueurs
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -19,6 +14,15 @@ Diag::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
+  resources :diagnostiqueurs do
+    resources :missions
+  end
+
+  resources :diagnostic_amiantes do
+    resources :amiantes
+  end
+
   resources :batiments do
     resources :pieces
   end

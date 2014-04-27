@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Docs:</strong>
+  <%= @diagnostic_amiante.docs %>
+</p>
+
+<p>
+  <strong>Accompagnateur:</strong>
+  <%= @diagnostic_amiante.accompagnateur %>
+</p>
+
+<p>
+  <strong>Commentaires:</strong>
+  <%= @diagnostic_amiante.commentaires %>
+</p>
+
+<p>
+  <strong>Conclusions:</strong>
+  <%= @diagnostic_amiante.conclusions %>
+</p>
+
+<%= link_to 'Edit', edit_diagnostic_amiante_path(@diagnostic_amiante) %> |
+<%= link_to 'Back', diagnostic_amiantes_path %>

@@ -1,0 +1,33 @@
+<h1>Listing diagnostic_amiantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Docs</th>
+      <th>Accompagnateur</th>
+      <th>Commentaires</th>
+      <th>Conclusions</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @diagnostic_amiantes.each do |diagnostic_amiante| %>
+      <tr>
+        <td><%= diagnostic_amiante.docs %></td>
+        <td><%= diagnostic_amiante.accompagnateur %></td>
+        <td><%= diagnostic_amiante.commentaires %></td>
+        <td><%= diagnostic_amiante.conclusions %></td>
+        <td><%= link_to 'Show', diagnostic_amiante %></td>
+        <td><%= link_to 'Edit', edit_diagnostic_amiante_path(diagnostic_amiante) %></td>
+        <td><%= link_to 'Destroy', diagnostic_amiante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Diagnostic amiante', new_diagnostic_amiante_path %>

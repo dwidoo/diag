@@ -11,13 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140427145611) do
+ActiveRecord::Schema.define(version: 20140427155702) do
+
+  create_table "amiantes", force: true do |t|
+    t.string   "identifiant"
+    t.string   "composant"
+    t.string   "partie_a_sonder"
+    t.string   "description"
+    t.string   "conclusion"
+    t.string   "commentaires"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "batiments", force: true do |t|
     t.string   "adresse"
     t.string   "designation"
     t.string   "code_postal"
     t.string   "commune"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "diagnostic_amiantes", force: true do |t|
+    t.text     "docs"
+    t.string   "accompagnateur"
+    t.text     "commentaires"
+    t.text     "conclusions"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

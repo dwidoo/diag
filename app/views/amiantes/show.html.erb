@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifiant:</strong>
+  <%= @amiante.identifiant %>
+</p>
+
+<p>
+  <strong>Composant:</strong>
+  <%= @amiante.composant %>
+</p>
+
+<p>
+  <strong>Partie a sonder:</strong>
+  <%= @amiante.partie_a_sonder %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @amiante.description %>
+</p>
+
+<p>
+  <strong>Conclusion:</strong>
+  <%= @amiante.conclusion %>
+</p>
+
+<p>
+  <strong>Commentaires:</strong>
+  <%= @amiante.commentaires %>
+</p>
+
+<%= link_to 'Edit', edit_amiante_path(@amiante) %> |
+<%= link_to 'Back', amiantes_path %>

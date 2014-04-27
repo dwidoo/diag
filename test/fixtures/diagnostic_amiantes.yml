@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  docs: MyText
+  accompagnateur: MyString
+  commentaires: MyText
+  conclusions: MyText
+
+two:
+  docs: MyText
+  accompagnateur: MyString
+  commentaires: MyText
+  conclusions: MyText

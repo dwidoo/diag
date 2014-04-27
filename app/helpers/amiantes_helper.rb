@@ -1,0 +1,2 @@
+module AmiantesHelper
+end

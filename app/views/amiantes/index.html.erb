@@ -1,0 +1,37 @@
+<h1>Listing amiantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifiant</th>
+      <th>Composant</th>
+      <th>Partie a sonder</th>
+      <th>Description</th>
+      <th>Conclusion</th>
+      <th>Commentaires</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amiantes.each do |amiante| %>
+      <tr>
+        <td><%= amiante.identifiant %></td>
+        <td><%= amiante.composant %></td>
+        <td><%= amiante.partie_a_sonder %></td>
+        <td><%= amiante.description %></td>
+        <td><%= amiante.conclusion %></td>
+        <td><%= amiante.commentaires %></td>
+        <td><%= link_to 'Show', amiante %></td>
+        <td><%= link_to 'Edit', edit_amiante_path(amiante) %></td>
+        <td><%= link_to 'Destroy', amiante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amiante', new_amiante_path %>

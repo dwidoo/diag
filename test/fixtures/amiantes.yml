@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  identifiant: MyString
+  composant: MyString
+  partie_a_sonder: MyString
+  description: MyString
+  conclusion: MyString
+  commentaires: MyString
+
+two:
+  identifiant: MyString
+  composant: MyString
+  partie_a_sonder: MyString
+  description: MyString
+  conclusion: MyString
+  commentaires: MyString

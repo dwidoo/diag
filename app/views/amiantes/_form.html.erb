@@ -1,0 +1,16 @@
+<%= simple_form_for(@amiante) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :identifiant %>
+    <%= f.input :composant %>
+    <%= f.input :partie_a_sonder %>
+    <%= f.input :description %>
+    <%= f.input :conclusion %>
+    <%= f.input :commentaires %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
