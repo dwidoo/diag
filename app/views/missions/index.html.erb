@@ -1,13 +1,13 @@
-<h1>Listing missions</h1>
+<h2>Liste des missions réalisées par <%= @missions.first.diagnostiqueur.prenom %> <%= @missions.first.diagnostiqueur.nom %> de <%= @missions.first.diagnostiqueur.raison_sociale %></h2>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Num dossier</th>
       <th>Date reperage</th>
-      <th>Heure reperage</th>
-      <th>Duree reperage</th>
+      
       <th>Top amiante</th>
+      <th>Adresse</th>
       <th>Perimetre reperage</th>
       <th>Dateheure visite</th>
       <th>Deadline rapport</th>
@@ -23,16 +23,16 @@
       <tr>
         <td><%= mission.num_dossier %></td>
         <td><%= mission.date_reperage %></td>
-        <td><%= mission.heure_reperage %></td>
-        <td><%= mission.duree_reperage %></td>
+        
         <td><%= mission.top_amiante %></td>
+        <td><%= mission.batiment.adresse %> <%= mission.batiment.code_postal %> </td>
         <td><%= mission.perimetre_reperage %></td>
         <td><%= mission.dateheure_visite %></td>
         <td><%= mission.deadline_rapport %></td>
         <td><%= mission.date_emission_rapport %></td>
-        <td><%= link_to 'Show', mission %></td>
-        <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-        <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', diagnostiqueur_mission_path(mission.diagnostiqueur,mission) %></td>
+        <td><%= link_to 'Edit', edit_diagnostiqueur_mission_path(mission.diagnostiqueur,mission) %></td>
+        <td><%= link_to 'Destroy', diagnostiqueur_mission_path(mission.diagnostiqueur,mission), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Mission', new_mission_path %>
+<%= link_to 'New Mission', new_diagnostiqueur_mission_path %>

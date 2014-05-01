@@ -41,6 +41,11 @@
 </p>
 
 <p>
+  <strong>Commune:</strong>
+  <%= @diagnostiqueur.commune %>
+</p>
+
+<p>
   <strong>Tel:</strong>
   <%= @diagnostiqueur.tel %>
 </p>
@@ -82,3 +87,4 @@
 
 <%= link_to 'Edit', edit_diagnostiqueur_path(@diagnostiqueur) %> |
 <%= link_to 'Back', diagnostiqueurs_path %>
+<p> <%= link_to 'Add Mission', new_diagnostiqueur_mission_path(@diagnostiqueur) %> </p>

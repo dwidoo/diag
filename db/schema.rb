@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140427155702) do
+ActiveRecord::Schema.define(version: 20140501161834) do
 
   create_table "amiantes", force: true do |t|
     t.string   "identifiant"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140427155702) do
     t.string   "commune"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "mission_id"
   end
 
   create_table "diagnostic_amiantes", force: true do |t|
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140427155702) do
     t.text     "conclusions"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "mission_id"
   end
 
   create_table "diagnostiqueurs", force: true do |t|
@@ -61,6 +63,7 @@ ActiveRecord::Schema.define(version: 20140427155702) do
     t.date     "validite_assurance"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "commune"
   end
 
   create_table "elements", force: true do |t|
@@ -84,6 +87,7 @@ ActiveRecord::Schema.define(version: 20140427155702) do
     t.date     "date_emission_rapport"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "diagnostiqueur_id"
   end
 
   create_table "pieces", force: true do |t|

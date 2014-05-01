@@ -1,5 +1,6 @@
 class MissionsController < ApplicationController
   before_action :set_mission, only: [:show, :edit, :update, :destroy]
+  before_action :set_diagnostiqueur, only: [:new, :create,:show]
 
   # GET /missions
   # GET /missions.json
@@ -14,7 +15,7 @@ class MissionsController < ApplicationController
 
   # GET /missions/new
   def new
-    @mission = Mission.new
+    @mission = @diagnostiqueur.missions.new
   end
 
   # GET /missions/1/edit
@@ -24,11 +25,11 @@ class MissionsController < ApplicationController
   # POST /missions
   # POST /missions.json
   def create
-    @mission = Mission.new(mission_params)
+    @mission = @diagnostiqueur.missions.new(mission_params)
 
     respond_to do |format|
       if @mission.save
-        format.html { redirect_to @mission, notice: 'Mission was successfully created.' }
+        format.html { redirect_to new_batiment_path, notice: 'Mission was successfully created.' }
         format.json { render action: 'show', status: :created, location: @mission }
       else
         format.html { render action: 'new' }
@@ -56,13 +57,16 @@ class MissionsController < ApplicationController
   def destroy
     @mission.destroy
     respond_to do |format|
-      format.html { redirect_to missions_url }
+      format.html { redirect_to diagnostiqueur_missions_url }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_diagnostiqueur
+      @diagnostiqueur = Diagnostiqueur.find(params[:diagnostiqueur_id])
+    end
     def set_mission
       @mission = Mission.find(params[:id])
     end

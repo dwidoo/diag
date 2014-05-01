@@ -5,14 +5,14 @@ one:
   date_reperage: 2014-04-27
   heure_reperage: 2014-04-27 16:56:11
   duree_reperage: 2014-04-27 16:56:11
-  top_amiante: false
+  top_amiante: true
   perimetre_reperage: MyText
   dateheure_visite: 2014-04-27 16:56:11
   deadline_rapport: 2014-04-27
   date_emission_rapport: 2014-04-27
 
 two:
-  num_dossier: 1
+  num_dossier: 2
   date_reperage: 2014-04-27
   heure_reperage: 2014-04-27 16:56:11
   duree_reperage: 2014-04-27 16:56:11

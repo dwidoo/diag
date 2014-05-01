@@ -1,11 +1,12 @@
 class PiecesController < ApplicationController
-	after_filter :load_batiment
+	before_action :load_batiment
 
 	def index
 		@pieces = @batiment.pieces.all
 	end
 
 	def new
+		@batiment = Batiment.find(params[:batiment_id])
 		@piece = @batiment.pieces.new
 	end
 
@@ -50,7 +51,7 @@ class PiecesController < ApplicationController
 	private
 	#pour charger le bâtiment parent après chaque méthode
 	def load_batiment
-		@batiment = @piece.batiment
+		@batiment = Batiment.find(params[:batiment_id])
 	end
 	#pour create - sécurité
 	def piece_params

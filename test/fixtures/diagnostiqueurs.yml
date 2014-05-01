@@ -1,22 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nom: MyString
-  prenom: MyString
-  raison_sociale: MyString
-  num_certif: MyString
-  validite_certif: 2014-04-27
-  obtention_certif: 2014-04-27
-  adresse: MyString
-  code_postal: MyString
-  tel: MyString
-  email: MyString
-  num_tva: MyString
-  siret: MyString
-  nom_assureur: MyString
-  coordonnees_assureur: MyText
-  num_assurance: MyString
-  validite_assurance: 2014-04-27
+  nom: Sultan
+  prenom: Mickael
+  raison_sociale: Hestia PE
+  num_certif: 1234567X8
+  validite_certif: 2015-04-27
+  obtention_certif: 2014-02-27
+  adresse: une certaine rue
+  code_postal: 94200
+  tel: 01 45 67 89 12
+  email: mika@example.org
+  num_tva: 1456278934
+  siret: 123456789
+  nom_assureur: AXA
+  coordonnees_assureur: Nanterre
+  num_assurance: 132456789012
+  validite_assurance: 2015-04-27
 
 two:
   nom: MyString

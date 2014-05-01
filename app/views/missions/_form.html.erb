@@ -1,7 +1,7 @@
-<%= simple_form_for(@mission) do |f| %>
+<%= simple_form_for([@mission.diagnostiqueur,@mission]) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-horizontal">
     <%= f.input :num_dossier %>
     <%= f.input :date_reperage %>
     <%= f.input :heure_reperage %>
@@ -14,6 +14,6 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit , :class => 'btn btn-large btn-primary'%>
   </div>
 <% end %>

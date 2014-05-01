@@ -1,24 +1,11 @@
 <h1>Listing diagnostiqueurs</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nom</th>
       <th>Prenom</th>
       <th>Raison sociale</th>
-      <th>Num certif</th>
-      <th>Validite certif</th>
-      <th>Obtention certif</th>
-      <th>Adresse</th>
-      <th>Code postal</th>
-      <th>Tel</th>
-      <th>Email</th>
-      <th>Num tva</th>
-      <th>Siret</th>
-      <th>Nom assureur</th>
-      <th>Coordonnees assureur</th>
-      <th>Num assurance</th>
-      <th>Validite assurance</th>
       <th></th>
       <th></th>
       <th></th>
@@ -31,19 +18,7 @@
         <td><%= diagnostiqueur.nom %></td>
         <td><%= diagnostiqueur.prenom %></td>
         <td><%= diagnostiqueur.raison_sociale %></td>
-        <td><%= diagnostiqueur.num_certif %></td>
-        <td><%= diagnostiqueur.validite_certif %></td>
-        <td><%= diagnostiqueur.obtention_certif %></td>
-        <td><%= diagnostiqueur.adresse %></td>
-        <td><%= diagnostiqueur.code_postal %></td>
-        <td><%= diagnostiqueur.tel %></td>
-        <td><%= diagnostiqueur.email %></td>
-        <td><%= diagnostiqueur.num_tva %></td>
-        <td><%= diagnostiqueur.siret %></td>
-        <td><%= diagnostiqueur.nom_assureur %></td>
-        <td><%= diagnostiqueur.coordonnees_assureur %></td>
-        <td><%= diagnostiqueur.num_assurance %></td>
-        <td><%= diagnostiqueur.validite_assurance %></td>
+        
         <td><%= link_to 'Show', diagnostiqueur %></td>
         <td><%= link_to 'Edit', edit_diagnostiqueur_path(diagnostiqueur) %></td>
         <td><%= link_to 'Destroy', diagnostiqueur, method: :delete, data: { confirm: 'Are you sure?' } %></td>

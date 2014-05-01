@@ -12,7 +12,7 @@ class BatimentsController < ApplicationController
 		
 		if @batiment.save
 			flash[:notice] = "Bâtiment créé!"
-			redirect_to @batiment
+			redirect_to new_batiment_piece_path(@batiment)
 		else
 			render('new')
 		end

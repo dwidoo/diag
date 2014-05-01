@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Bâtiment:</h2>
+<p> <% bat = @mission.batiment %>
+    <%= bat.adresse %> , <%=bat.code_postal %> <%=bat.commune %></p>
 <p>
   <strong>Num dossier:</strong>
   <%= @mission.num_dossier %>
@@ -45,5 +48,5 @@
   <%= @mission.date_emission_rapport %>
 </p>
 
-<%= link_to 'Edit', edit_mission_path(@mission) %> |
-<%= link_to 'Back', missions_path %>
+<%= link_to 'Edit', edit_diagnostiqueur_mission_path(@diagnostiqueur,@mission) %> |
+<%= link_to 'Back', diagnostiqueur_missions_path %>

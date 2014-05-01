@@ -69,6 +69,6 @@ class DiagnostiqueursController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diagnostiqueur_params
-      params.require(:diagnostiqueur).permit(:nom, :prenom, :raison_sociale, :num_certif, :validite_certif, :obtention_certif, :adresse, :code_postal, :tel, :email, :num_tva, :siret, :nom_assureur, :coordonnees_assureur, :num_assurance, :validite_assurance)
+      params.require(:diagnostiqueur).permit(:nom, :prenom, :raison_sociale, :num_certif, :validite_certif, :obtention_certif, :adresse, :code_postal, :commune, :tel, :email, :num_tva, :siret, :nom_assureur, :coordonnees_assureur, :num_assurance, :validite_assurance)
     end
 end

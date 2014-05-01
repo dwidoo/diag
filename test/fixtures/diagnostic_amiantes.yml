@@ -1,10 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  docs: MyText
+  docs: aucun
   accompagnateur: MyString
   commentaires: MyText
-  conclusions: MyText
+  conclusions: Il y a de l'amiante.
 
 two:
   docs: MyText

@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @mission %> |
-<%= link_to 'Back', missions_path %>
+<%= link_to 'Show', diagnostiqueur_mission_path(@mission.diagnostiqueur,@mission) %> |
+<%= link_to 'Back', diagnostiqueur_missions_path(@mission.diagnostiqueur) %>
